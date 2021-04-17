@@ -9,6 +9,13 @@
 // getEmailDomain("t.mellink@novi.nl") geeft novi.nl
 // getEmailDomain("a.wiersma@outlook.com") geeft outlook.com
 
+const getEmailDomain = email => {
+    const domain = email.split("@").pop();
+    return domain;
+}
+console.log(getEmailDomain("n.eeken@novi-education.nl"));
+console.log(getEmailDomain("t.mellink@novi.nl"));
+console.log(getEmailDomain("a.wiersma@outlook.com"));
 
 
 
@@ -20,6 +27,26 @@
 // typeOfEmail("novi.nlaapjesk@outlook.com") geeft geeft "Extern" <-- deze moet het ook doen!
 // typeOfEmail("a.wiersma@outlook.com") geeft "Extern"
 
+
+const typeOfEmail = email => {
+    const studentEmail = email.includes("education");
+    const employeeEmail = email.includes("novi.nl");
+    const external = email.includes("outlook.com");
+    if (studentEmail === true){
+        return "Student";
+    }
+    else if (employeeEmail === true){
+        return "Medewerker"
+    }
+    else if (external === true) {
+        return "Extern";
+    }
+}
+
+console.log(typeOfEmail("t.mellink@novi.nl"));
+console.log(typeOfEmail("n.eeken@novi-education.nl"));
+console.log(typeOfEmail("novi.nlaapjesk@outlook.com")); // This one is not returning extern.
+console.log(typeOfEmail("a.wiersma@outlook.com"))
 
 
 /* Opdracht  3 */
@@ -34,3 +61,18 @@
 // checkEmailValidity("n.eekenanovi.nl") geeft false - want geen @
 // checkEmailValidity("n.eeken@novinl.") geeft false - want de punt mag niet als laatst
 // checkEmailValidity("tessmellink@novi,nl") geeft false - want er staat een komma in
+
+
+// STAPPENPLAN //
+// 1. use solution from internet
+
+const checkEmailValidity = email => {
+    const re =  /\S+@\S+\.\S+/;
+    return re.test(email);
+}
+
+console.log(checkEmailValidity('n.eeken@novi.nl'));
+console.log(checkEmailValidity("tessmellink@novi.nl"));
+console.log(checkEmailValidity("n.eekenanovi.nl"));
+console.log(checkEmailValidity("n.eeken@novinl."));
+console.log(checkEmailValidity("tessmellink@novi,nl"));

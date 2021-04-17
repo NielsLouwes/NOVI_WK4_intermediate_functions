@@ -16,6 +16,29 @@ const grades = [9, 8, 5, 7, 7, 4, 9, 8, 8, 3, 6, 8, 5, 6];
 
 // ---- Verwachte uitkomst: 6
 
+// 1. Write a for loop that runs through grades.length.
+// 2. IF function to select all numbers >= 8.
+// 3. push the number >= 8 to another array. Create an empty array to receive.
+
+// for (const grade of grades) {
+//     if (grade >= 8){
+//         cumLaude.push(grades[grade]);
+//     }
+//     console.log(cumLaude);
+// }
+//
+// console.log(cumLaude.length);  // 6 Cum Laude members.
+
+for (let i = 0;i < grades.length; i++){
+    if (grades[i] >= 8){
+        cumLaude.push(grades[i]);
+    }
+}
+
+console.log(cumLaude);
+const bestStudents = cumLaude.length;
+console.log(bestStudents);
+
 
 /*  1b: Omschrijven tot een herbruikbare functie   */
 // Schrijf een functie genaamd cumLaude, die een array van cijfers verwacht (zoals grades) en het aantal Cum laude studenten teruggeeft. Gebruik hiervoor jouw antwoord van 1a.
@@ -27,7 +50,21 @@ const grades = [9, 8, 5, 7, 7, 4, 9, 8, 8, 3, 6, 8, 5, 6];
 // cumLaude([6, 4, 5]) geeft 0
 // cumLaude([8, 9, 4, 6, 10]) geeft 3
 
+// STAPPENPLAN //
 
+// 1. allows input via parameter
+// 2. check input whether above or equal to 8
+// 3. Return number of cum laude students
+
+
+
+const cumLaude2 = ([grades]) => {
+    for (let i = 0;i < grades.length; i++){
+        if (grades[i] >= 8){
+            cumLaude.push(grades[i]);
+        }
+    }
+}
 
 
 /* Opdracht  2: Gemiddeld cijfer */
@@ -41,6 +78,20 @@ const grades = [9, 8, 5, 7, 7, 4, 9, 8, 8, 3, 6, 8, 5, 6];
 // Log het antwoord in de terminal.
 
 // ---- Verwachte uitkomst: 6.642857142857143
+
+//STAPPENPLAN //
+
+// 1. We need to add up all the arrays in the function and dvide by number of individual array items
+// 2. We use grades.length to ensure all are included
+
+let sum = 0;
+
+const sumOf = sum(grades) => {
+    for (let index = 0; grades.length)
+        }
+const averageGrade = grade => {
+
+}
 
 
 /* 2b: Omschrijven tot een herbruikbare functie */
