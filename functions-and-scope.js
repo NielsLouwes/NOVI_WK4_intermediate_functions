@@ -3,6 +3,7 @@
 // Tip: je mag hier geen ingebouwde object methoden gebruiken, dus daar hoef je niet naar te kijken.
 
 const grades = [9, 8, 5, 7, 7, 4, 9, 8, 8, 3, 6, 8, 5, 6];
+const cumLaude = [];
 
 /* Opdracht  1: Cum Laude */
 
@@ -57,14 +58,14 @@ console.log(bestStudents);
 // 3. Return number of cum laude students
 
 
-
-const cumLaude2 = ([grades]) => {
-    for (let i = 0;i < grades.length; i++){
-        if (grades[i] >= 8){
-            cumLaude.push(grades[i]);
-        }
-    }
-}
+//
+// const cumLaude2 = ([grades]) => {
+//     for (let i = 0;i < grades.length; i++){
+//         if (grades[i] >= 8){
+//             cumLaude.push(grades[i]);
+//         }
+//     }
+// }
 
 
 /* Opdracht  2: Gemiddeld cijfer */
@@ -84,14 +85,14 @@ const cumLaude2 = ([grades]) => {
 // 1. We need to add up all the arrays in the function and dvide by number of individual array items
 // 2. We use grades.length to ensure all are included
 
-let sum = 0;
-
-const sumOf = sum(grades) => {
-    for (let index = 0; grades.length)
-        }
-const averageGrade = grade => {
-
-}
+// let sum = 0;
+//
+// const sumOf = sum(grades) => {
+//     for (let index = 0; grades.length)
+//         }
+// const averageGrade = grade => {
+//
+// }
 
 
 /* 2b: Omschrijven tot een herbruikbare functie */
